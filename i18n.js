@@ -150,6 +150,24 @@ const I18N = {
     'prog.corsaire': 'Igrani program s kostumom in scenarijem po vaši izbiri — doživite svojo fantazijo.',
     'prog.primadonna': 'Vrhunski VIP ritual: jacuzzi, penina, dve uri in vse dodatke vključene. Za najbolj zahtevne goste.',
     'prog.etoile': 'Nočni VIP program — vse vključeno, brez omejitev v okviru pravil salona.',
+
+    'programs.title': 'Izberite svoj ritual užitka',
+    'programs.hint': 'Programi se samodejno menjajo — kliknite za izbor',
+
+    'rot.0': 'veliko izbiro programov',
+    'rot.1': 'prijetno vzdušje',
+    'rot.2': 'izvrstne maserke',
+    'rot.3': 'popolno diskretnost',
+
+    'seo.h2': 'Programi v salonu erotske masaže Ballerina',
+    'seo.li1': '«Puant», «Adagio», «Étoile» — seansi največjega sproščanja in prijetnega počitka.',
+    'seo.li2': '«Pas de Deux» — program za pare, dve maserki v eni sobi.',
+    'seo.li3': '«Prima Donna» — VIP ritual z jacuzzijem in vsemi dodatki.',
+    'seo.t4': 'Erotska masaža v našem salonu poteka v udobnih pogojih, v vzdušju, ki vabi k uživanju.',
+    'seo.more': 'Preberi vse',
+    'seo.less': 'Skrij',
+
+    'footer.taxi': 'Pokliči taksi',
   },
 
   // ============================== ENGLISH ==============================
@@ -300,6 +318,24 @@ const I18N = {
     'prog.corsaire': 'A role-play program with costume and scenario of your choice — live your fantasy.',
     'prog.primadonna': 'The top VIP ritual: jacuzzi, champagne, two hours and every extra included. For the most demanding guests.',
     'prog.etoile': 'The night VIP program — everything included, no limits within the house rules.',
+
+    'programs.title': 'Choose your ritual of pleasure',
+    'programs.hint': 'Programs rotate automatically — click to select',
+
+    'rot.0': 'a wide choice of programs',
+    'rot.1': 'a cosy atmosphere',
+    'rot.2': 'wonderful masseuses',
+    'rot.3': 'complete privacy',
+
+    'seo.h2': 'Programs at the Ballerina erotic massage salon',
+    'seo.li1': '«Puant», «Adagio», «Étoile» — sessions of maximum relaxation and pleasant rest.',
+    'seo.li2': '«Pas de Deux» — a program for couples, two masseuses in one room.',
+    'seo.li3': '«Prima Donna» — a VIP ritual with jacuzzi and all extras included.',
+    'seo.t4': 'Erotic massage in our salon takes place in comfortable conditions, in an atmosphere made for pleasure.',
+    'seo.more': 'Read in full',
+    'seo.less': 'Collapse',
+
+    'footer.taxi': 'Call a taxi',
   },
 
   // ============================== SRPSKI ==============================
@@ -450,6 +486,24 @@ const I18N = {
     'prog.corsaire': 'Program sa kostimom i scenarijem po vašem izboru — doživite svoju fantaziju.',
     'prog.primadonna': 'Vrhunski VIP ritual: đakuzi, šampanjac, dva sata i svi dodaci uključeni. Za najzahtevnije goste.',
     'prog.etoile': 'Noćni VIP program — sve uključeno, bez ograničenja u okviru pravila salona.',
+
+    'programs.title': 'Izaberite svoj ritual uživanja',
+    'programs.hint': 'Programi se automatski smenjuju — kliknite za izbor',
+
+    'rot.0': 'veliki izbor programa',
+    'rot.1': 'prijatnu atmosferu',
+    'rot.2': 'divne maserke',
+    'rot.3': 'potpunu diskreciju',
+
+    'seo.h2': 'Programi u salonu erotske masaže Ballerina',
+    'seo.li1': '«Puant», «Adagio», «Étoile» — seanse maksimalnog opuštanja i prijatnog odmora.',
+    'seo.li2': '«Pas de Deux» — program za parove, dve maserke u jednoj sobi.',
+    'seo.li3': '«Prima Donna» — VIP ritual sa đakuzijem i svim dodacima.',
+    'seo.t4': 'Erotska masaža u našem salonu se izvodi u udobnim uslovima, u atmosferi koja raspoložava uživanju.',
+    'seo.more': 'Pročitaj sve',
+    'seo.less': 'Sakrij',
+
+    'footer.taxi': 'Pozovi taksi',
   },
 
   // ============================== РУССКИЙ ==============================
@@ -600,6 +654,24 @@ const I18N = {
     'prog.corsaire': 'Игровая программа с костюмом и сценарием по вашему выбору — проживите свою фантазию.',
     'prog.primadonna': 'Верхний VIP ритуал: джакузи, шампанское, два часа и все дополнения включены. Для самых требовательных гостей.',
     'prog.etoile': 'Ночная VIP программа — всё включено, без ограничений в рамках правил салона.',
+
+    'programs.title': 'Выберите свой ритуал наслаждения',
+    'programs.hint': 'Программы листаются автоматически — нажмите, чтобы выбрать',
+
+    'rot.0': 'большой выбор программ',
+    'rot.1': 'уютную атмосферу',
+    'rot.2': 'великолепных мастеров',
+    'rot.3': 'полную конфиденциальность',
+
+    'seo.h2': 'Программы в салоне эротического массажа Ballerina',
+    'seo.li1': '«Puant», «Adagio», «Étoile» — сеансы максимального расслабления и приятного отдыха.',
+    'seo.li2': '«Pas de Deux» — программа для пар, два мастера в одной комнате.',
+    'seo.li3': '«Prima Donna» — VIP ритуал с джакузи и всеми дополнениями.',
+    'seo.t4': 'Эротический массаж в нашем салоне проводится в комфортных условиях, в атмосфере, располагающей к наслаждениям.',
+    'seo.more': 'Читать полностью',
+    'seo.less': 'Свернуть',
+
+    'footer.taxi': 'Вызвать такси',
   },
 };
 

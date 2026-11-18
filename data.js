@@ -2,16 +2,27 @@
 // Names/stats are demo content for partner review. Photos are placeholders.
 
 const MASTERS = [
-  { id: 'lara',  name: 'Lara',  age: 21, h: 171, w: 59, bust: 2,   vip: false, img: 'assets/img/m1.jpg' },
-  { id: 'mila',  name: 'Mila',  age: 24, h: 168, w: 54, bust: 2.5, vip: true,  img: 'assets/img/m2.jpg' },
-  { id: 'nina',  name: 'Nina',  age: 22, h: 164, w: 52, bust: 1.5, vip: false, img: 'assets/img/m3.jpg' },
-  { id: 'sara',  name: 'Sara',  age: 26, h: 170, w: 58, bust: 3,   vip: true,  img: 'assets/img/m4.jpg' },
-  { id: 'tea',   name: 'Tea',   age: 23, h: 166, w: 51, bust: 2,   vip: false, img: 'assets/img/m5.jpg' },
-  { id: 'iva',   name: 'Iva',   age: 25, h: 173, w: 57, bust: 2,   vip: false, img: 'assets/img/m6.jpg' },
-  { id: 'lea',   name: 'Lea',   age: 20, h: 162, w: 49, bust: 1.5, vip: true,  img: 'assets/img/m7.jpg' },
-  { id: 'maja',  name: 'Maja',  age: 27, h: 169, w: 60, bust: 3,   vip: false, img: 'assets/img/m8.jpg' },
-  { id: 'vera',  name: 'Vera',  age: 28, h: 167, w: 55, bust: 2.5, vip: false, img: 'assets/img/m9.jpg' },
+  { id: 'lara',  name: 'Lara',  age: 21, h: 171, w: 59, bust: 2,   vip: false, sil: false, img: 'assets/img/m1.jpg' },
+  { id: 'mila',  name: 'Mila',  age: 24, h: 168, w: 54, bust: 2.5, vip: true,  sil: true,  img: 'assets/img/m2.jpg' },
+  { id: 'nina',  name: 'Nina',  age: 22, h: 164, w: 52, bust: 1.5, vip: false, sil: false, img: 'assets/img/m3.jpg' },
+  { id: 'sara',  name: 'Sara',  age: 26, h: 170, w: 58, bust: 3,   vip: true,  sil: true,  img: 'assets/img/m4.jpg' },
+  { id: 'tea',   name: 'Tea',   age: 23, h: 166, w: 51, bust: 2,   vip: false, sil: false, img: 'assets/img/m5.jpg' },
+  { id: 'iva',   name: 'Iva',   age: 25, h: 173, w: 57, bust: 2,   vip: false, sil: false, img: 'assets/img/m6.jpg' },
+  { id: 'lea',   name: 'Lea',   age: 20, h: 162, w: 49, bust: 1.5, vip: true,  sil: true,  img: 'assets/img/m7.jpg' },
+  { id: 'maja',  name: 'Maja',  age: 27, h: 169, w: 60, bust: 3,   vip: false, sil: false, img: 'assets/img/m8.jpg' },
 ];
+
+// extra shots per master for the card photo slider (placeholder set)
+const MASTER_SLIDES = {
+  lara: ['assets/img/m1.jpg', 'assets/img/t1.jpg', 'assets/img/dl/u3.jpg',  'assets/img/dl/u4.jpg'],
+  mila: ['assets/img/m2.jpg', 'assets/img/t2.jpg', 'assets/img/dl/u7.jpg',  'assets/img/dl/u8.jpg'],
+  nina: ['assets/img/m3.jpg', 'assets/img/t3.jpg', 'assets/img/dl/u11.jpg', 'assets/img/dl/u12.jpg'],
+  sara: ['assets/img/m4.jpg', 'assets/img/t4.jpg', 'assets/img/dl/u15.jpg', 'assets/img/dl/u16.jpg'],
+  tea:  ['assets/img/m5.jpg', 'assets/img/t5.jpg', 'assets/img/dl/u19.jpg', 'assets/img/dl/u20.jpg'],
+  iva:  ['assets/img/m6.jpg', 'assets/img/t6.jpg', 'assets/img/dl/u23.jpg', 'assets/img/dl/u24.jpg'],
+  lea:  ['assets/img/m7.jpg', 'assets/img/t7.jpg', 'assets/img/dl/u27.jpg', 'assets/img/dl/u28.jpg'],
+  maja: ['assets/img/m8.jpg', 'assets/img/t8.jpg', 'assets/img/dl/u31.jpg', 'assets/img/dl/u32.jpg'],
+};
 
 // Program names are the same in every language (ballet terms);
 // descriptions live in i18n.js under prog.<id>
@@ -30,6 +41,7 @@ const CONTACTS = {
   phone: '+386 40 555 018',
   phoneHref: 'tel:+38640555018',
   tg: 'https://t.me/ballerina_spa',
+  mail: 'ballerina@ballerina.spa',
   address: {
     sl: 'Ljubljana, Slovenska cesta 15',
     en: 'Ljubljana, Slovenska cesta 15',

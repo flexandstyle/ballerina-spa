@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ballerina SPA — salon erotske masaže v Ljubljani</title>
+<meta name="description" content="Ballerina SPA — salon erotske masaže v centru Ljubljane. 24/7, diskretno, po predhodnem dogovoru.">
+<meta property="og:title" content="Ballerina SPA">
+<meta property="og:description" content="Salon erotske masaže v centru Ljubljane">
+<meta property="og:image" content="assets/logo-src.png">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Manrope:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ AGE GATE ============ -->
+<div class="agegate" id="agegate">
+  <div class="agegate__card">
+    <img src="assets/logo-mark.png" alt="" class="agegate__mark">
+    <div class="logo-word agegate__logo">BALLERINA<span>SPA</span></div>
+    <div class="agegate__age">18+</div>
+    <h2 class="agegate__q" data-i18n="age.q"></h2>
+    <p class="agegate__t" data-i18n="age.t"></p>
+    <button class="btn btn--fill agegate__yes" id="ageYes" data-i18n="age.yes"></button>
+    <button class="btn btn--line agegate__no" id="ageNo" data-i18n="age.no"></button>
+    <p class="agegate__bye" id="ageBye" data-i18n="age.bye" hidden></p>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="hdr" id="hdr">
+  <button class="hdr__burger" id="burger" aria-label="menu">
+    <span></span><span></span><span></span>
+  </button>
+  <a class="hdr__logo" href="#top">
+    <img src="assets/logo-mark.png" alt="Ballerina SPA" class="hdr__mark">
+    <span class="logo-word">BALLERINA<span>SPA</span></span>
+  </a>
+  <div class="hdr__right">
+    <span class="hdr__hours" data-i18n="header.work"></span>
+    <a class="hdr__phone" id="hdrPhone" href="tel:+38640555018">+386 40 555 018</a>
+    <div class="lang" id="lang">
+      <button class="lang__cur" id="langCur">SL <i>▾</i></button>
+      <div class="lang__list" id="langList"></div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ DRAWER ============ -->
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer">
+  <div class="drawer__head">
+    <span class="logo-word">BALLERINA<span>SPA</span></span>
+    <button class="drawer__x" id="drawerX" aria-label="close">×</button>
+  </div>
+  <nav class="drawer__nav">
+    <a href="#masters"   data-i18n="nav.masters"></a>
+    <a href="#programs"  data-i18n="nav.programs"></a>
+    <a href="#extras"    data-i18n="nav.extras"></a>
+    <a href="#outcall"   data-i18n="nav.outcall"></a>
+    <a href="#bachelor"  data-i18n="nav.bachelor"></a>
+    <a href="#interior"  data-i18n="nav.interior"></a>
+    <a href="#articles"  data-i18n="nav.articles"></a>
+    <a href="#promo"     data-i18n="nav.promo"></a>
+    <a href="#jobs"      data-i18n="nav.jobs" id="navJobs"></a>
+    <a href="#contacts"  data-i18n="nav.contacts"></a>
+  </nav>
+  <div class="drawer__foot">
+    <p class="drawer__addr" id="drawerAddr"></p>
+    <a class="btn btn--fill" id="drawerTg" target="_blank" rel="noopener" data-i18n="hero.cta"></a>
+  </div>
+</aside>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero__bg" style="background-image:url('assets/img/hero.jpg')"></div>
+    <div class="hero__shade"></div>
+    <div class="hero__inner">
+      <h1 class="hero__title" data-i18n="hero.title"></h1>
+      <p class="hero__sub" data-i18n="hero.sub"></p>
+      <a class="btn btn--line hero__cta" id="heroTg" target="_blank" rel="noopener" data-i18n="hero.cta"></a>
+    </div>
+  </section>
+
+  <!-- ============ TODAY STRIP ============ -->
+  <section class="strip">
+    <div class="strip__track" id="stripTrack"></div>
+    <button class="strip__nav strip__nav--l" id="stripL" aria-label="prev">‹</button>
+    <button class="strip__nav strip__nav--r" id="stripR" aria-label="next">›</button>
+  </section>
+
+  <!-- ============ MASTERS ============ -->
+  <section class="sec" id="masters">
+    <h2 class="sec__title" data-i18n="masters.title"></h2>
+    <div class="masters" id="mastersGrid"></div>
+  </section>
+
+  <!-- ============ PICK BANNER ============ -->
+  <section class="pick">
+    <div class="pick__bg" style="background-image:url('assets/img/b1.jpg')"></div>
+    <div class="pick__inner">
+      <h2 class="pick__title" data-i18n="pick.title"></h2>
+      <p class="pick__text" data-i18n="pick.text"></p>
+      <a class="btn btn--line" id="pickBtn" target="_blank" rel="noopener" data-i18n="pick.btn"></a>
+    </div>
+  </section>
+
+  <!-- ============ PROGRAMS ============ -->
+  <section class="sec sec--programs" id="programs">
+    <p class="sec__kicker" data-i18n="programs.kicker"></p>
+    <div class="programs">
+      <div class="programs__left">
+        <h2 class="programs__title"><span data-i18n="programs.title1"></span><br><span data-i18n="programs.title2"></span></h2>
+        <p class="programs__price"><span data-i18n="programs.from"></span> €120 <em>·</em> <span id="progDur">60</span> <span data-i18n="programs.min"></span></p>
+        <a class="btn btn--fill" href="#programsList" data-i18n="programs.all"></a>
+      </div>
+      <div class="programs__right" style="background-image:url('assets/img/prog.jpg')">
+        <ul class="programs__names" id="programsNames"></ul>
+      </div>
+    </div>
+    <div class="grid" id="programsList"></div>
+  </section>
+
+  <!-- ============ EXTRAS ============ -->
+  <section class="sec" id="extras">
+    <h2 class="sec__title" data-i18n="extras.title"></h2>
+    <p class="sec__sub" data-i18n="extras.sub"></p>
+    <div class="extras" id="extrasList"></div>
+  </section>
+
+  <!-- ============ OUTCALL + BACHELOR ============ -->
+  <section class="sec duo">
+    <article class="duo__card" id="outcall">
+      <div class="duo__img" style="background-image:url('assets/img/i2.jpg')"></div>
+      <div class="duo__body">
+        <h3 data-i18n="outcall.title"></h3>
+        <p data-i18n="outcall.text"></p>
+        <a class="btn btn--fill duo__btn" target="_blank" rel="noopener" data-i18n="outcall.btn"></a>
+      </div>
+    </article>
+    <article class="duo__card" id="bachelor">
+      <div class="duo__img" style="background-image:url('assets/img/b2.jpg')"></div>
+      <div class="duo__body">
+        <h3 data-i18n="bachelor.title"></h3>
+        <p data-i18n="bachelor.text"></p>
+        <a class="btn btn--fill duo__btn" target="_blank" rel="noopener" data-i18n="bachelor.btn"></a>
+      </div>
+    </article>
+  </section>
+
+  <!-- ============ ADVANTAGES ============ -->
+  <section class="sec advs">
+    <h2 class="sec__title" data-i18n="adv.title"></h2>
+    <p class="sec__sub"><span data-i18n="adv.sub"></span> <b class="hl" data-i18n="adv.sub.hl"></b></p>
+    <div class="advs__grid">
+      <article class="adv">
+        <div class="adv__grid" data-grid="1"></div>
+        <h3 data-i18n="adv1.t"></h3>
+        <p data-i18n="adv1.x"></p>
+        <a href="#programs" class="adv__more" data-i18n="adv.more"></a>
+      </article>
+      <article class="adv">
+        <div class="adv__grid" data-grid="2"></div>
+        <h3 data-i18n="adv2.t"></h3>
+        <p data-i18n="adv2.x"></p>
+        <a href="#interior" class="adv__more" data-i18n="adv.more"></a>
+      </article>
+      <article class="adv">
+        <div class="adv__grid" data-grid="3"></div>
+        <h3 data-i18n="adv3.t"></h3>
+        <p data-i18n="adv3.x"></p>
+        <a href="#masters" class="adv__more" data-i18n="adv.more"></a>
+      </article>
+      <article class="adv">
+        <div class="adv__grid" data-grid="4"></div>
+        <h3 data-i18n="adv4.t"></h3>
+        <p data-i18n="adv4.x"></p>
+        <a href="#contacts" class="adv__more" data-i18n="adv.more"></a>
+      </article>
+    </div>
+    <p class="sec__disclaimer" data-i18n="disclaimer"></p>
+  </section>
+
+  <!-- ============ INTERIOR ============ -->
+  <section class="sec" id="interior">
+    <h2 class="sec__title" data-i18n="interior.title"></h2>
+    <div class="interior">
+      <div class="interior__main" style="background-image:url('assets/img/i1.jpg')"></div>
+      <div class="interior__thumbs">
+        <div style="background-image:url('assets/img/i3.jpg')"></div>
+        <div style="background-image:url('assets/img/i4.jpg')"></div>
+        <div style="background-image:url('assets/img/i5.jpg')"></div>
+        <div style="background-image:url('assets/img/i6.jpg')"></div>
+      </div>
+    </div>
+    <div class="interior__text">
+      <h3 data-i18n="interior.h"></h3>
+      <p data-i18n="interior.t1"></p>
+      <p data-i18n="interior.t2"></p>
+    </div>
+  </section>
+
+  <!-- ============ TELEGRAM CTA ============ -->
+  <section class="tgcta">
+    <div class="tgcta__bg" style="background-image:url('assets/img/tg.jpg')"></div>
+    <div class="tgcta__shade"></div>
+    <div class="tgcta__inner">
+      <h2 data-i18n="tg.title"></h2>
+      <p data-i18n="tg.sub"></p>
+      <a class="btn btn--white" id="tgCta" target="_blank" rel="noopener" data-i18n="tg.btn"></a>
+    </div>
+  </section>
+
+  <!-- ============ SEO ============ -->
+  <section class="sec seo">
+    <h2 data-i18n="seo.h"></h2>
+    <p class="sec__disclaimer" data-i18n="disclaimer"></p>
+    <p data-i18n="seo.t1"></p>
+    <p data-i18n="seo.t2"></p>
+    <p data-i18n="seo.t3"></p>
+  </section>
+
+  <!-- ============ ARTICLES ============ -->
+  <section class="sec" id="articles">
+    <h2 class="sec__title" data-i18n="articles.title"></h2>
+    <div class="articles">
+      <article class="art">
+        <div class="art__img" style="background-image:url('assets/img/art2.jpg')"></div>
+        <h3 data-i18n="art1.t"></h3>
+        <p data-i18n="art1.x"></p>
+      </article>
+      <article class="art">
+        <div class="art__img" style="background-image:url('assets/img/b1.jpg')"></div>
+        <h3 data-i18n="art2.t"></h3>
+        <p data-i18n="art2.x"></p>
+      </article>
+      <article class="art">
+        <div class="art__img" style="background-image:url('assets/img/art3.jpg')"></div>
+        <h3 data-i18n="art3.t"></h3>
+        <p data-i18n="art3.x"></p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ PROMO ============ -->
+  <section class="sec" id="promo">
+    <h2 class="sec__title" data-i18n="promo.title"></h2>
+    <article class="promoCard">
+      <div class="promoCard__img" style="background-image:url('assets/img/promo.jpg')"></div>
+      <div class="promoCard__body">
+        <span class="tag" data-i18n="promo.popup.tag"></span>
+        <h3 data-i18n="promo.card.h"></h3>
+        <p data-i18n="promo.card.t"></p>
+      </div>
+    </article>
+  </section>
+
+  <!-- ============ CONTACTS ============ -->
+  <section class="contacts" id="contacts">
+    <iframe class="contacts__map" id="mapFrame" loading="lazy" title="map"
+      src="https://www.google.com/maps?q=Slovenska+cesta,+Ljubljana,+Slovenia&z=15&output=embed"></iframe>
+    <div class="contacts__card">
+      <h2 data-i18n="contacts.title"></h2>
+      <a class="contacts__phone" id="cardPhone" href="tel:+38640555018">+386 40 555 018</a>
+      <p class="contacts__addr" id="cardAddr"></p>
+      <ul class="contacts__spots">
+        <li><i>M</i><span data-i18n="contacts.center"></span></li>
+        <li><i>M</i><span data-i18n="contacts.station"></span></li>
+        <li><i>M</i><span data-i18n="contacts.oldtown"></span></li>
+      </ul>
+      <a class="btn btn--fill contacts__tg" id="cardTg" target="_blank" rel="noopener" data-i18n="hero.cta"></a>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="ftr">
+    <div class="ftr__cols">
+      <nav class="ftr__col">
+        <a href="#masters"  data-i18n="nav.masters"></a>
+        <a href="#extras"   data-i18n="nav.extras"></a>
+        <a href="#outcall"  data-i18n="nav.outcall"></a>
+        <a href="#bachelor" data-i18n="nav.bachelor"></a>
+        <a href="#programs" data-i18n="nav.programs"></a>
+      </nav>
+      <nav class="ftr__col">
+        <a href="#articles" data-i18n="nav.articles"></a>
+        <a href="#interior" data-i18n="nav.interior"></a>
+        <a href="#promo"    data-i18n="nav.promo"></a>
+        <a href="#contacts" data-i18n="nav.contacts"></a>
+      </nav>
+      <div class="ftr__brand">
+        <span class="logo-word">BALLERINA<span>SPA</span></span>
+        <p class="ftr__hours" data-i18n="footer.hours"></p>
+        <p class="ftr__appt" data-i18n="footer.appt"></p>
+        <div class="ftr__soc">
+          <a id="socTg" target="_blank" rel="noopener" aria-label="Telegram">✈</a>
+          <a id="socWa" target="_blank" rel="noopener" aria-label="WhatsApp">✆</a>
+          <a id="socCar" target="_blank" rel="noopener" aria-label="Car">⌂</a>
+        </div>
+        <a class="ftr__tg" id="ftrTg" target="_blank" rel="noopener" data-i18n="footer.tg"></a>
+        <p class="ftr__copy" data-i18n="footer.copy"></p>
+      </div>
+    </div>
+    <div class="ftr__bar">
+      <span class="ftr__18">18+</span>
+      <span data-i18n="footer.noIntim"></span>
+      <a href="#" id="privacyLink" data-i18n="footer.privacy"></a>
+      <span>·</span>
+      <a href="#jobs" data-i18n="footer.jobs"></a>
+    </div>
+  </footer>
+</main>
+
+<!-- ============ FABs ============ -->
+<button class="chipPromo" id="chipPromo" data-i18n="promo.title"></button>
+<a class="fab" id="fab" target="_blank" rel="noopener" aria-label="chat">
+  <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M21 5.5 3.4 11.9c-.8.3-.8 1.4.1 1.6l4.4 1.4 1.7 5.3c.3.8 1.3 1 1.8.4l2.4-2.4 4.5 3.3c.6.5 1.6.1 1.7-.7l2.7-14.4c.1-.9-.9-1.5-1.7-.9z"/></svg>
+</a>
+
+<!-- ============ COOKIE ============ -->
+<div class="cookie" id="cookie" hidden>
+  <p data-i18n="cookie.t"></p>
+  <div>
+    <a href="#" id="cookieMore" data-i18n="cookie.more"></a>
+    <button class="btn btn--white btn--sm" id="cookieOk" data-i18n="cookie.ok"></button>
+  </div>
+</div>
+
+<!-- ============ PROMO POPUP ============ -->
+<div class="mpopup" id="promoPopup" hidden>
+  <div class="mpopup__card mpopup__card--img">
+    <button class="mpopup__x" data-close>×</button>
+    <div class="mpopup__img" style="background-image:url('assets/img/promo.jpg')"></div>
+    <div class="mpopup__body">
+      <span class="tag" data-i18n="promo.popup.tag"></span>
+      <h3 data-i18n="promo.popup.h"></h3>
+      <p data-i18n="promo.popup.t"></p>
+      <a class="btn btn--fill" href="#promo" data-close data-i18n="promo.popup.btn"></a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ MASTER MODAL ============ -->
+<div class="mpopup" id="masterModal" hidden>
+  <div class="mpopup__card mpopup__card--master">
+    <button class="mpopup__x" data-close>×</button>
+    <div class="mm__img" id="mmImg"></div>
+    <div class="mpopup__body">
+      <h3 id="mmName"></h3>
+      <p class="mm__stats" id="mmStats"></p>
+      <p class="mm__about" id="mmAbout"></p>
+      <a class="btn btn--fill" id="mmBook" target="_blank" rel="noopener" data-i18n="masters.book"></a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PROGRAM MODAL ============ -->
+<div class="mpopup" id="progModal" hidden>
+  <div class="mpopup__card mpopup__card--master">
+    <button class="mpopup__x" data-close>×</button>
+    <div class="mm__img" id="pmImg"></div>
+    <div class="mpopup__body">
+      <h3 id="pmName"></h3>
+      <p class="mm__stats" id="pmMeta"></p>
+      <p class="mm__about" id="pmDesc"></p>
+      <a class="btn btn--fill" id="pmBook" target="_blank" rel="noopener" data-i18n="masters.book"></a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ TEXT MODAL (privacy / jobs) ============ -->
+<div class="mpopup" id="textModal" hidden>
+  <div class="mpopup__card">
+    <button class="mpopup__x" data-close>×</button>
+    <div class="mpopup__body">
+      <h3 id="tmTitle"></h3>
+      <p id="tmText"></p>
+    </div>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="i18n.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

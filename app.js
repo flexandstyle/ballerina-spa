@@ -266,7 +266,10 @@ function buildExtras() {
 
 /* ---------------- interior thumbs ---------------- */
 $$('#intThumbs img').forEach(im => im.addEventListener('click', () => {
-  $('#intMain').src = im.src;
+  const main = $('#intMain');
+  main.src = im.src;
+  main.hidden = false;
+  $('#intVid').style.display = 'none';
 }));
 
 /* ---------------- seo toggle ---------------- */
